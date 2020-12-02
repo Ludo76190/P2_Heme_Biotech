@@ -44,7 +44,8 @@ Son code révèle de nombreux problèmes :
    Chaque étape est appelée par la méthode principale Analytics.
    Elle appelle dans l'ordre les classes :
    
-        1. ReadSymptomsFile qui instancie la classe ReadSymptomsFile.
-        2. CountSymptoms qui instancie la class CountSymptoms.
-        3. WriteOutputFile qui instancie la class WriteOutputFile.
+        1. ReadSymptomsFile avec la methode getSymptomsFromFile qui lit le fichier et le place dans une liste.
+        2. CountSymptoms avec la méthode getSymptomsFromList qui compte les nombre d'occurence des symptomes et les 
+        place dans une map.
+        3. WriteOutputFile avec la méthode writeResult qui écrit la map dans le fichier result.out.
         
