@@ -18,5 +18,9 @@ public class Analytics {
         //Read source file (symptoms.txt) and put in a list
         ReadSymptomsFile readSymptomsFile = new ReadSymptomsFile();
         List<String> symptoms = readSymptomsFile.getSymptomsFromFile(SourceFile);
+
+        //counting symptom ans put in a map
+        CountSymptoms countSymptoms = new CountSymptoms();
+        Map<String, Integer> symptomsMap = countSymptoms.getSymptomsFromList(symptoms);
     }
 }
