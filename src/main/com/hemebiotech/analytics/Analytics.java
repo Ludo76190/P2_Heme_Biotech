@@ -22,5 +22,9 @@ public class Analytics {
         //counting symptom ans put in a map
         CountSymptoms countSymptoms = new CountSymptoms();
         Map<String, Integer> symptomsMap = countSymptoms.getSymptomsFromList(symptoms);
+
+        //write result in a file (result.out)
+        WriteOutputFile writeOutputFile = new WriteOutputFile();
+        writeOutputFile.writeResult(symptomsMap);
     }
 }
