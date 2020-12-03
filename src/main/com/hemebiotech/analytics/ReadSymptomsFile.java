@@ -39,6 +39,7 @@ public class ReadSymptomsFile implements ISymptomReader {
             }
             finally {
                 try {
+                    //Test si le fichier a bien été ouvert
                     if (br != null) {
                         br.close();
                     }

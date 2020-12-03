@@ -10,7 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c84fc9a-9010-4870-aa9b-64ff1715b50b" name="Default Changelist" comment="" />
+    <list default="true" id="8c84fc9a-9010-4870-aa9b-64ff1715b50b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/com/hemebiotech/analytics/ReadSymptomsFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/hemebiotech/analytics/ReadSymptomsFile.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
