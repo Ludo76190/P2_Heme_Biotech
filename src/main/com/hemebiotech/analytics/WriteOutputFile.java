@@ -15,20 +15,20 @@ public class WriteOutputFile implements ISymptomWrite {
      * @author Ludovic.ALLEGAERT
      */
 
-    final String OutputFile = "result.out";
+    final String outputFileName = "result.out";
 
     public void writeResult(Map<String, Integer> symptomsMap) throws IOException {
 
-        //Définition du path du fichier de sortie
-        String path = System.getProperty("user.home") + System.getProperty("file.separator") + OutputFile;
+        //Définition du fichier de sortie
+        String fileOutput = System.getProperty("user.home") + System.getProperty("file.separator") + outputFileName;
 
-        // Ecriture du fichier
-        FileWriter output = new FileWriter(path);
+        // Écriture du fichier
+        FileWriter output = new FileWriter(fileOutput);
         if (symptomsMap != null && !symptomsMap.isEmpty()) {
             symptomsMap.forEach((k, v) -> {
                 try {
-                    output.write(k + "=" + v);
-                    output.write(System.getProperty("line.separator"));
+                    //Écrit le résultat et ajoute un saut de ligne
+                    output.write(k + "=" + v + "\n");
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -37,7 +37,7 @@ public class WriteOutputFile implements ISymptomWrite {
         }
         else {
             try{
-                output.write("aucun symptome n'a été trouvé!");
+                output.write("aucun symptôme n'a été trouvé!");
             }
             catch (IOException e) {
                 System.out.println(e.getMessage());
@@ -46,6 +46,6 @@ public class WriteOutputFile implements ISymptomWrite {
                 output.close();
             }
         }
-        System.out.println("le résultat se trouve dans le fichier: " + path);
+        System.out.println("le resultat se trouve dans le fichier: " + fileOutput);
     }
 }

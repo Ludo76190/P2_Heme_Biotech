@@ -20,8 +20,7 @@ public class ReadSymptomsFile implements ISymptomReader {
      */
 
     public List<String> getSymptomsFromFile(String fileName) throws IOException {
-        List<String> result;
-        result = new ArrayList<String>();
+        List<String> result = new ArrayList<String>();
 
         // initialise le bufferedreader pour pouvoir le clore dans le finally
         BufferedReader br=null;
