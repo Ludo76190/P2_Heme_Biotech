@@ -10,7 +10,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="8c84fc9a-9010-4870-aa9b-64ff1715b50b" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="8c84fc9a-9010-4870-aa9b-64ff1715b50b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/com/hemebiotech/analytics/ReadSymptomsFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/hemebiotech/analytics/ReadSymptomsFile.java" afterDir="false" />
+    </list>
+>>>>>>> 0.3.0
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,6 +96,7 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+<<<<<<< HEAD
   </component>
   <component name="WindowStateProjectService">
     <state width="1876" height="292" key="GridCell.Tab.0.bottom" timestamp="1606904918246">
@@ -108,5 +115,7 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1876" height="292" key="GridCell.Tab.0.right/3840.-2.1920.1080/0.0.1920.1080/1920.-16.1920.1080@0.0.1920.1080" timestamp="1606904918245" />
+=======
+>>>>>>> 0.3.0
   </component>
 </project>

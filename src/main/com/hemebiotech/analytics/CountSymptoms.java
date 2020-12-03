@@ -24,12 +24,12 @@ public class CountSymptoms implements ISymptomCount {
 
         if (symptoms != null && !symptoms.isEmpty()) {
             Collections.sort(symptoms);
-
-            // Ajoute chaque nouveau symptome à la map et l'incrémente de +1 si il existe déjà
+            // Ajoute chaque nouveau symptôme à la map et l'incrémente de +1 si il existe déjà
             for (String symptom : symptoms) {
                 if (map.containsKey(symptom)) {
                     map.put(symptom,map.get(symptom) + 1 );
-                } else {
+                }
+                else {
                     map.put(symptom,1);
                 }
             }
