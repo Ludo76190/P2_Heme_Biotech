@@ -17,33 +17,46 @@ public class WriteOutputFile implements ISymptomWrite {
 
     final String outputFileName = "result.out";
 
-    public void writeResult(Map<String, Integer> symptomsMap) throws IOException {
+    public void writeResult(Map<String, Integer> symptomsMap) {
 
         //Définition du fichier de sortie
         String fileOutput = System.getProperty("user.home") + System.getProperty("file.separator") + outputFileName;
 
         // Écriture du fichier
-        FileWriter output = new FileWriter(fileOutput);
-        if (symptomsMap != null && !symptomsMap.isEmpty()) {
-            symptomsMap.forEach((k, v) -> {
-                try {
+        FileWriter output = null;
+        try {
+            output = new FileWriter(fileOutput);
+            if (symptomsMap != null && !symptomsMap.isEmpty()) {
+                FileWriter finalOutput = output;
+                symptomsMap.forEach((k, v) -> {
                     //Écrit le résultat et ajoute un saut de ligne
-                    output.write(k + "=" + v + "\n");
-                } catch (IOException e) {
-                    e.printStackTrace();
+                    try {
+                        finalOutput.write(k + "=" + v + "\n");
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                });
+                output.close();
+            }
+            else {
+                try{
+                    output.write("aucun symptôme n'a été trouvé!");
                 }
-            });
-            output.close();
+                catch (IOException e) {
+                    System.out.println(e.getMessage());
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        else {
-            try{
-                output.write("aucun symptôme n'a été trouvé!");
+        finally {
+            try {
+                if (output != null) {
+                    output.close();
+                }
             }
             catch (IOException e) {
-                System.out.println(e.getMessage());
-            }
-            finally {
-                output.close();
+                e.printStackTrace();
             }
         }
         System.out.println("le resultat se trouve dans le fichier: " + fileOutput);
