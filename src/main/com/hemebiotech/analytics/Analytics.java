@@ -16,15 +16,15 @@ public class Analytics {
         final String SourceFile = "symptoms.txt";
 
         //Read source file (symptoms.txt) and put in a list
-        ReadSymptomsFile readSymptomsFile = new ReadSymptomsFile();
+        ISymptomReader readSymptomsFile = new ReadSymptomsFile();
         List<String> symptoms = readSymptomsFile.getSymptomsFromFile(SourceFile);
 
         //counting symptom ans put in a map
-        CountSymptoms countSymptoms = new CountSymptoms();
+        ISymptomCount countSymptoms = new CountSymptoms();
         Map<String, Integer> symptomsMap = countSymptoms.getSymptomsFromList(symptoms);
 
         //write result in a file (result.out)
-        WriteOutputFile writeOutputFile = new WriteOutputFile();
+        ISymptomWrite writeOutputFile = new WriteOutputFile();
         writeOutputFile.writeResult(symptomsMap);
     }
 }
