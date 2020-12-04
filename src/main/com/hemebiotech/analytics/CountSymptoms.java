@@ -1,6 +1,5 @@
 package main.com.hemebiotech.analytics;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
@@ -23,7 +22,6 @@ public class CountSymptoms implements ISymptomCount {
         Map<String, Integer> map = new TreeMap<>();
 
         if (symptoms != null && !symptoms.isEmpty()) {
-            Collections.sort(symptoms);
             // Ajoute chaque nouveau symptôme à la map et l'incrémente de +1 si il existe déjà
             for (String symptom : symptoms) {
                 if (map.containsKey(symptom)) {

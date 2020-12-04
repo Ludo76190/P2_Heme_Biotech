@@ -14,13 +14,11 @@ public class ReadSymptomsFile implements ISymptomReader {
      *
      * @return la liste de symptomes
      *
-     * @throws IOException
-     *
      * @author Ludovic Allegaert
      */
 
-    public List<String> getSymptomsFromFile(String fileName) throws IOException {
-        List<String> result = new ArrayList<String>();
+    public List<String> getSymptomsFromFile(String fileName) {
+        List<String> result = new ArrayList<>();
 
         // initialise le bufferedreader pour pouvoir le clore dans le finally
         BufferedReader br=null;
@@ -28,7 +26,7 @@ public class ReadSymptomsFile implements ISymptomReader {
         if (fileName != null) {
             try {
                 br = new BufferedReader(new FileReader(fileName));
-                String line=null;
+                String line;
                 // Ajoute chaque ligne dans la liste
                 while ((line = br.readLine()) != null) {
                     result.add(line);
